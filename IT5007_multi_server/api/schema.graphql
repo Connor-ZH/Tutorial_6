@@ -1,0 +1,34 @@
+scalar GraphQLDate
+
+type Entry {
+  serial_number: Int!
+  name: String!
+  phone_number: String!
+  time_stamp: String!
+}
+
+input Entry_inputs {
+  serial_number: Int!
+  name: String!
+  phone_number: String!
+  time_stamp: String!
+}
+
+input Delete_inputs{
+  serial_number: Int!
+  name: String
+}
+
+
+
+##### Top level declarations
+type Query {
+  about: String!
+  read_entry_list: [Entry!]!
+  read_entry_information(serial_number: Int!): Entry
+}
+type Mutation {
+  add_entry(entry: Entry_inputs!): Entry
+  delete_entry(delete_entry: Delete_inputs!): Boolean
+  delete_all_entry(message: String!): Boolean
+}
