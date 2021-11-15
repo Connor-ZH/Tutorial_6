@@ -30,7 +30,7 @@ Please make sure your container have exported two ports, namely 3000 and 5000
 ## 3.Set up the frontend
 ### First step: Installing the dependencies of frontend
 - cd frontend/
-- npm install
+- npm install (run npm install --force in case you meet some error)
 ### Second step: Run the frontend and Test
 - make sure your virtual machine meets the requirement of api of 29 and target of Android 10.0
 - react-native run-android
